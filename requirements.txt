@@ -1,2 +1,4 @@
 requests==2.32.3
 matplotlib
+numpy
+pandas
