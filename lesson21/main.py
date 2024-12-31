@@ -10,7 +10,10 @@ model = genai.GenerativeModel("gemini-1.5-flash")
 @app.route("/")
 @app.route("/<string:question>")
 def index(question:str=""):
-    return f"{question}"
+    response = model.generate_content(f"{question},回應請輸出成為html格式")
+    html_format = response.text
+    html_format = html_format.replace("```html","").replace("```","")
+    return html_format
 
 @app.route('/hello')
 def hello():
