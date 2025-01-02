@@ -1,0 +1,6 @@
+Flask==3.1.0
+google-generativeai
+python-dotenv
+gunicorn
+line-bot-sdk
+requests
